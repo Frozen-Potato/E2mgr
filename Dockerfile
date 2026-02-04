@@ -35,9 +35,14 @@ RUN apt-get update && apt-get install -y \
 # =========================
 # mdclog
 # =========================
-RUN git clone https://github.com/o-ran-sc/ric-plt-lib-rmr.git && \
-cd ric-plt-lib-rmr/mdclog && \
-make && make install && \
+RUN git clone https://github.com/o-ran-sc/com-log.git \
+    && cd com-log \
+    && ./autogen.sh \
+    && ./configure --prefix=/usr \
+    && make -j$(nproc) \
+    && make install \
+    && ldconfig \
+    && cd / && rm -rf com-log
 
 # =========================
 # HARD SAFETY: ensure protoc is from /usr/bin
