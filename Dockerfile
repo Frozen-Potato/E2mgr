@@ -35,9 +35,9 @@ RUN apt-get update && apt-get install -y \
 # =========================
 # mdclog
 # =========================
-git clone https://github.com/o-ran-sc/ric-plt-lib-rmr.git
-cd ric-plt-lib-rmr/mdclog
-make && make install
+RUN git clone https://github.com/o-ran-sc/ric-plt-lib-rmr.git && \
+cd ric-plt-lib-rmr/mdclog && \
+make && make install && \
 
 # =========================
 # HARD SAFETY: ensure protoc is from /usr/bin
