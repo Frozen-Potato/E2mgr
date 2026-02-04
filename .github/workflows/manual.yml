@@ -27,4 +27,4 @@ jobs:
         context: .
         file: ./Dockerfile # or ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/E2MgrBase:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/e2mgrbase:latest
