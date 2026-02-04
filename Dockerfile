@@ -33,6 +33,14 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # =========================
+# sctp (APT)
+# =========================
+   
+RUN apt-get update && apt-get install -y \
+    libsctp-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# =========================
 # mdclog
 # =========================
 RUN apt-get update && apt-get install -y \
