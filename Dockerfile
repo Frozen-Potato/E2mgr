@@ -36,14 +36,17 @@ RUN apt-get update && apt-get install -y \
 # mdclog
 # =========================
 RUN apt-get update && apt-get install -y \
+    build-essential \
     autoconf \
     automake \
     libtool \
+    autoconf-archive \
     pkg-config \
-    make \
-    gcc \
+    gawk \
+    libjsoncpp-dev \
     git \
     && rm -rf /var/lib/apt/lists/*
+
 
 RUN git clone https://github.com/o-ran-sc/com-log.git \
     && cd com-log \
