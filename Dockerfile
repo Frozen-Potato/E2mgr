@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y \
     git \
     ca-certificates \
     curl \
-    grpc \
     && rm -rf /var/lib/apt/lists/*
 
 # =========================
@@ -37,6 +36,7 @@ RUN apt-get update && apt-get install -y \
 # mdclog
 # =========================
 RUN apt-get update && apt-get install -y \
+    protobuf-compiler-grpc \
     build-essential \
     autoconf \
     automake \
