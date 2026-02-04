@@ -35,6 +35,16 @@ RUN apt-get update && apt-get install -y \
 # =========================
 # mdclog
 # =========================
+RUN apt-get update && apt-get install -y \
+    autoconf \
+    automake \
+    libtool \
+    pkg-config \
+    make \
+    gcc \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN git clone https://github.com/o-ran-sc/com-log.git \
     && cd com-log \
     && ./autogen.sh \
