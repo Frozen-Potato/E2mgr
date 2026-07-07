@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     libgrpc++-dev \
     grpc-proto \
     libjemalloc-dev \
+    libtbb-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # =========================
