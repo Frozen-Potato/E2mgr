@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
 # Protobuf + gRPC (APT)
 # =========================
 RUN apt-get update && apt-get install -y \
+    libncurses-dev \
     protobuf-compiler \
     libprotobuf-dev \
     libgrpc-dev \
