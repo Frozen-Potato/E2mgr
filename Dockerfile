@@ -15,9 +15,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # =========================
-# Protobuf + gRPC (APT)
+# Protobuf + gRPC + ncurse + sqlite3
 # =========================
 RUN apt-get update && apt-get install -y \
+    libsqlite3-dev  \
     ncurses-base \
     ncurses-term  \
     libncurses-dev \
